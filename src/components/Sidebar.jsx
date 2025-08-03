@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
@@ -13,7 +14,7 @@ import { Layout, Menu, Button, Avatar, Space, Dropdown } from 'antd';
 import logo from '../assets/logo.png';
 import LoginModal from '../pages/LoginModal';
 import { useAuthStore } from '../store/useAuthStore';
-
+import { Link } from 'react-router-dom';
 const { Header, Sider, Content } = Layout;
 
 function getItem(label, key, icon, children) {
@@ -21,8 +22,8 @@ function getItem(label, key, icon, children) {
 }
 
 const items = [
-    getItem('Dashboard', '1', <PieChartOutlined />),
-    getItem('User', '2', <UserOutlined />),
+    getItem(<Link to="/">Dashboard</Link>, '1', <PieChartOutlined />),
+    getItem(<Link to="/user">User</Link>, '2', <UserOutlined />),
     getItem('Vendor', '3', <UserOutlined />),
     getItem('Master', 'sub1', <AppstoreOutlined />, [
         getItem('Tom', '4'),
