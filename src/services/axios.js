@@ -1,16 +1,17 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const API = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL
-})
+});
 
-// Optional: Token injection
+
 API.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token')
+  const token = localStorage.getItem('token');
   if (token) {
-    config.headers.Authorization = `Bearer ${token}`
+    config.headers.Authorization = `${token}`;
   }
-  return config
-})
+  return config;
+});
 
-export default API
+export default API;
+

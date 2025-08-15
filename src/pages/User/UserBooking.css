@@ -1,0 +1,96 @@
+.booking-container {
+  padding: 20px;
+  background: #f9fafb;
+}
+
+.booking-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.booking-table th, .booking-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.booking-table thead {
+  background: #007bff;
+  color: white;
+}
+
+.booking-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.booking-table tbody tr:hover {
+  background: #f1f5ff;
+}
+
+.payment-mode {
+  text-transform: capitalize;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.subservice-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subservice-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subservice-item img {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.subservice-name {
+  font-weight: bold;
+}
+
+.subservice-info {
+  font-size: 12px;
+  color: #666;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}

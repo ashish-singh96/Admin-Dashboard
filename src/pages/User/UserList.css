@@ -1,0 +1,8 @@
+
+.custom-table-wrapper {
+  overflow-x: auto; /* enable horizontal scroll */
+}
+
+.custom-row td {
+  white-space: nowrap; /* prevent text from wrapping */
+}
