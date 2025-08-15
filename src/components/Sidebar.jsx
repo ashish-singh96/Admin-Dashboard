@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { Outlet, useLocation, Link } from 'react-router-dom';
+import { Outlet, useLocation, Link, useNavigate } from 'react-router-dom';
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
     PieChartOutlined,
     UserOutlined,
     AppstoreOutlined,
-    ContainerOutlined,
-    ShoppingCartOutlined,
     LogoutOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, Button, Avatar, Space, Dropdown } from 'antd';
@@ -41,6 +39,7 @@ const pathKeyMap = {
 };
 
 const Sidebar = () => {
+    const navigate = useNavigate();
     const location = useLocation();
     const [collapsed, setCollapsed] = useState(false);
     const { isAuthenticated, logout } = useAuthStore();
@@ -75,7 +74,8 @@ const Sidebar = () => {
             ),
             onClick: () => {
                 logout();
-                setIsLoginModalOpen(true);
+                navigate('/');        
+                setIsLoginModalOpen(true); // optional
             },
         },
     ];
