@@ -139,7 +139,7 @@ const UserBooking = () => {
                       }}
                     >
                       <img
-                        src={`https://backend.serviceapp.laxmipool.in/${s.subServiceImage}`}
+                        src={`${s.subServiceImage}`}
                         alt={s.subServiceName}
                         style={{
                           width: "36px",

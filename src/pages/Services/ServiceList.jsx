@@ -8,11 +8,7 @@ import AddService from "./AddService";
 const ServiceList = () => {
   const [addModalVisible, setAddModalVisible] = useState(false);
   const [data, setData] = useState([]);
-  const [pagination, setPagination] = useState({
-    current: 1,
-    pageSize: 10,
-    total: 0,
-  });
+  const [pagination, setPagination] = useState({ current: 1, pageSize: 10,  total: 0});
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
 

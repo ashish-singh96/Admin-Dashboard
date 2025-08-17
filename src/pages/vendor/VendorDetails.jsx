@@ -93,10 +93,11 @@ const VendorDetails = () => {
             <Card title="Address" bordered>
               <Descriptions column={1} labelStyle={{ fontWeight: 'bold' }}>
                 <Descriptions.Item label="Full Address">{address.fullAddress}</Descriptions.Item>
-                <Descriptions.Item label="Address Line 2">{address.addressLine2}</Descriptions.Item>
-                <Descriptions.Item label="Locality">{address.locality}</Descriptions.Item>
+                <Descriptions.Item label="Label">{address.label}</Descriptions.Item>
+                <Descriptions.Item label="City">{address.city}</Descriptions.Item>
                 <Descriptions.Item label="Postal Code">{address.pincode}</Descriptions.Item>
-                <Descriptions.Item label="Country">{address.country}</Descriptions.Item>
+                <Descriptions.Item label="Locality">{address.locality}</Descriptions.Item>
+                <Descriptions.Item label="State">{address.state}</Descriptions.Item>
               </Descriptions>
             </Card>
           </Col>

@@ -64,7 +64,7 @@ export const addService = (formData) => {
   });
 };
 
-export const addSubService = (formData, serviceId) => {
+export const addSubService = (formData) => {
   const token = localStorage.getItem("token");
   return API.post("/sub-service", formData, {
     headers: {
@@ -74,3 +74,21 @@ export const addSubService = (formData, serviceId) => {
   });
 };
 
+
+export const getTimeSlot = ({currentPage = 1, itemsPerPage = 10, searchData = '' }) => {
+  const token = localStorage.getItem('token');
+  return API.get('/time-slot', {
+    params: { currentPage, itemsPerPage, searchData },
+    headers: { Authorization: `${token}` }
+  });
+};
+
+export const addTimeSlot = (formData) => {
+  const token = localStorage.getItem("token");
+  return API.post("/time-slot", formData, {
+    headers: {
+      "Authorization": `${token}`,
+      "Content-Type": "multipart/form-data", 
+    },
+  });
+};
