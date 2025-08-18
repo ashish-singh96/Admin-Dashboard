@@ -6,7 +6,6 @@ import AddTimeSlot from "./AddTimeSlot.jsx";
 
 const TimeSlotList = () => {
   const [data, setData] = useState([]);
-  const [addModalVisible, setAddModalVisible] = useState(false);
   const [pagination, setPagination] = useState({ current: 1, pageSize: 10, total: 0, });
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");

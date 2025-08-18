@@ -10,6 +10,7 @@ import VendorDetails from '../pages/vendor/VendorDetails';
 import ServiceList from '../pages/Services/ServiceList';
 import SubServiceList from '../pages/SubServices/SubServiceList';
 import TimeSlotList from '../pages/TimeSlots/TimeSlotList';
+import CouponList from '../pages/Coupon/CouponList';
 const AppRoutes = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ const AppRoutes = () => {
         setIsLoginOpen(false);
       }
     }
-  }, [location.pathname]); 
+  }, [location.pathname]);
 
   return (
     <>
@@ -38,10 +39,11 @@ const AppRoutes = () => {
           <Route path="user" element={<UserList />} />
           <Route path="user/:id" element={<UserBooking />} />
           <Route path="vendor" element={<VendorList />} />
-          <Route path="vendor/:id" element={<VendorDetails/>} />
+          <Route path="vendor/:id" element={<VendorDetails />} />
           <Route path="services" element={<ServiceList />} />
           <Route path="sub-services" element={<SubServiceList />} />
-          <Route path="time-slot" element={<TimeSlotList/>} />
+          <Route path="time-slot" element={<TimeSlotList />} />
+          <Route path="coupon" element={<CouponList />} />
         </Route>
       </Routes>
 

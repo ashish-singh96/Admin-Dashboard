@@ -92,3 +92,15 @@ export const addTimeSlot = (formData) => {
     },
   });
 };
+
+
+export const addCoupon= (formData) => {
+  const token = localStorage.getItem("token");
+  return API.post("/coupon", formData, {
+    headers: {
+      "Authorization": `${token}`,
+      "Content-Type": "multipart/form-data", 
+    },
+  });
+};
+
